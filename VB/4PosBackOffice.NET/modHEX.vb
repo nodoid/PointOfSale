@@ -34,7 +34,7 @@ Module modHEX
 		'Convert every HEX code to the
 		'equivalent ASCII character
 		PosAdd = 2 + Separators
-        HexByte = System.Text.UnicodeEncoding.Unicode.GetBytes(StrConv(HexText, vbUnicode(HexText)))
+		HexByte = System.Text.UnicodeEncoding.Unicode.GetBytes(StrConv(HexText, vbUnicode(HexText)))
 		For a = 0 To (ByteSize - 1)
 			byteArray(a) = m_HexToByte(HexByte(Pos), HexByte(Pos + 1))
 			Pos = Pos + PosAdd
@@ -45,31 +45,36 @@ Module modHEX
         HexToStr = System.Text.Encoding.UTF8.GetString(byteArray)
 		
 	End Function
+
+	Private Function vbUnicode(hexText As String) As VbStrConv
+		Throw New NotImplementedException()
+	End Function
+
 	Private Sub InitHex()
 		Dim a As Integer
 		Dim HexBytes() As Byte
 		Dim HexString As String
-		
+
 		'The routine is initialized
 		m_InitHex = True
-		
+
 		'Create a string with all hex values
 		HexString = New String("0", 512)
 		For a = 1 To 255
 			Mid(HexString, 1 + a * 2 - CShort(a < 16)) = Hex(a)
-		Next 
-        HexBytes = System.Text.UnicodeEncoding.Unicode.GetBytes(StrConv(HexString, vbUnicode(HexString)))
-		
+		Next
+		HexBytes = System.Text.UnicodeEncoding.Unicode.GetBytes(StrConv(HexString, vbUnicode(HexString)))
+
 		'Create the Str->Hex array
 		For a = 0 To 255
 			m_ByteToHex(a, 0) = HexBytes(a * 2)
 			m_ByteToHex(a, 1) = HexBytes(a * 2 + 1)
-		Next 
-		
+		Next
+
 		'Create the Str->Hex array
 		For a = 0 To 255
 			m_HexToByte(m_ByteToHex(a, 0), m_ByteToHex(a, 1)) = a
-		Next 
+		Next
 	End Sub
 	Public Function StrToHex(ByRef Text As String, Optional ByRef Separator As String = " ") As String
 		

@@ -78,7 +78,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>4POSLogo%28Small%29.ico</ApplicationIcon>
+    <ApplicationIcon>
+    </ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -139,40 +140,57 @@
     <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="Interop.ADOX">
-      <HintPath>obj\Debug\Interop.ADOX.dll</HintPath>
+    <Reference Include="Interop.ADOX, Version=2.8.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.ADOX.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.DPFPDevXLib">
-      <HintPath>obj\Release\Interop.DPFPDevXLib.dll</HintPath>
+    <Reference Include="Interop.DPFPCtlXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.DPFPCtlXLib.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.DPFPEngXLib">
-      <HintPath>obj\Release\Interop.DPFPEngXLib.dll</HintPath>
+    <Reference Include="Interop.DPFPDevXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.DPFPDevXLib.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.DPFPShrXLib">
-      <HintPath>obj\Release\Interop.DPFPShrXLib.dll</HintPath>
+    <Reference Include="Interop.DPFPEngXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.DPFPEngXLib.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.DpSdkEngLib">
-      <HintPath>obj\Release\Interop.DpSdkEngLib.dll</HintPath>
+    <Reference Include="Interop.DPFPShrXLib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.DPFPShrXLib.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.DPSDKOPSLib">
-      <HintPath>obj\Release\Interop.DPSDKOPSLib.dll</HintPath>
+    <Reference Include="Interop.DpSdkEngLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.DpSdkEngLib.dll</HintPath>
     </Reference>
-    <Reference Include="Interop.MSDataGridLib">
-      <HintPath>obj\Release\Interop.MSDataGridLib.dll</HintPath>
+    <Reference Include="Interop.DPSDKOPSLib, Version=1.1.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.DPSDKOPSLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.DSICLIENTXLib, Version=3.8.0.0, Culture=neutral, PublicKeyToken=6e6fb6a3aba40745, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.DSICLIENTXLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.MSDataGridLib, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\Interop.MSDataGridLib.dll</HintPath>
+    </Reference>
+    <Reference Include="microsoft.stdformat, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>libs\microsoft.stdformat.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic.Compatibility" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -209,16 +227,6 @@
       <SubType>Component</SubType>
     </None>
     <Compile Include="basCryptoProcs.vb" />
-    <Compile Include="bin\Debug\pricingDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>pricingDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="bin\Debug\templateDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>templateDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="cdjector.vb" />
     <Compile Include="CGUnzipFiles.vb" />
     <Compile Include="CGZipFiles.vb" />
@@ -1573,6 +1581,7 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="My Project\Resources.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -1599,7 +1608,7 @@
     <Compile Include="transaction.vb" />
     <Compile Include="transactionSpecial.vb" />
     <Compile Include="VarPtr.vb" />
-    <Compile Include="vbFromUnicode.vb" />
+    <None Include="vbFromUnicode.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmBackupDatabase.resX">
@@ -2405,38 +2414,6 @@
     <DesignDataWithDesignTimeCreatableTypes Include="cryWaitronTotals.rpt" />
     <DesignDataWithDesignTimeCreatableTypes Include="cryWHRecVerify.rpt" />
     <DesignDataWithDesignTimeCreatableTypes Include="cryWHTransfer.rpt" />
-    <None Include="bin\Debug\pricingDataSet.xsc">
-      <DependentUpon>pricingDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bin\Debug\pricingDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>pricingDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bin\Debug\pricingDataSet.xss">
-      <DependentUpon>pricingDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bin\Debug\templateDataSet.xsc">
-      <DependentUpon>templateDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bin\Debug\templateDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>templateDataSet.Designer.vb</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bin\Debug\templateDataSet.xss">
-      <DependentUpon>templateDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bin\Debug\templateReportDataSet.xsc">
-      <DependentUpon>templateReportDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bin\Debug\templateReportDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="bin\Debug\templateReportDataSet.xss">
-      <DependentUpon>templateReportDataSet.xsd</DependentUpon>
-    </None>
     <None Include="CrystalReport1.mht" />
     <None Include="menuDefault.rpt" />
     <None Include="My Project\app.manifest" />
@@ -2452,21 +2429,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="4POSLogo%28Small%29.ico" />
-    <Content Include="bin\Debug\pricing.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\template.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\templateReport.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\templateReport1.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="bin\Debug\waitron.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Images\4BMP.JPG" />
     <Content Include="Images\4POSBACK.JPG" />
     <Content Include="Images\4POSBack800.jpg" />
@@ -2477,6 +2439,16 @@
     <Content Include="Images\4POSLogin.jpg" />
     <Content Include="Images\4POSLogo%28Small%29.jpg" />
     <Content Include="Images\backofficeBG.jpg" />
+    <Content Include="libs\Interop.ADOX.dll" />
+    <Content Include="libs\Interop.DPFPCtlXLib.dll" />
+    <Content Include="libs\Interop.DPFPDevXLib.dll" />
+    <Content Include="libs\Interop.DPFPEngXLib.dll" />
+    <Content Include="libs\Interop.DPFPShrXLib.dll" />
+    <Content Include="libs\Interop.DpSdkEngLib.dll" />
+    <Content Include="libs\Interop.DPSDKOPSLib.dll" />
+    <Content Include="libs\Interop.DSICLIENTXLib.dll" />
+    <Content Include="libs\Interop.MSDataGridLib.dll" />
+    <Content Include="libs\microsoft.stdformat.dll" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="ADODB">
@@ -2503,15 +2475,6 @@
       <VersionMinor>0</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="StdFormat">
-      <Guid>{6B263850-900B-11D0-9484-00A0C91110ED}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
@@ -2554,66 +2517,6 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <PublishFile Include="bin\Debug\pricing.mdb">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="bin\Debug\template.mdb">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="bin\Debug\templateReport.mdb">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="bin\Debug\templateReport1.mdb">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="bin\Debug\waitron.mdb">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>File</FileType>
-    </PublishFile>
-    <PublishFile Include="Microsoft.VisualBasic.PowerPacks.Vs">
-      <Visible>False</Visible>
-      <Group>
-      </Group>
-      <TargetPath>
-      </TargetPath>
-      <PublishState>Include</PublishState>
-      <IncludeHash>True</IncludeHash>
-      <FileType>Assembly</FileType>
-    </PublishFile>
     <PublishFile Include="ShockwaveFlashObjects">
       <Visible>False</Visible>
       <Group>
@@ -2624,6 +2527,26 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="CrystalDecisions.CrystalReports.Engine">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="CrystalDecisions.ReportSource">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="CrystalDecisions.Shared">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="CrystalDecisions.Windows.Forms">
+      <Version>1.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="VisualBasic.PowerPacks.Vs">
+      <Version>1.0.0</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

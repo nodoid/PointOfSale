@@ -2,6 +2,7 @@ Option Strict Off
 Option Explicit On
 Friend Class frmDepositTake
 	Inherits System.Windows.Forms.Form
+
 	Dim WithEvents adoPrimaryRS As ADODB.Recordset
 	Dim mbChangedByCode As Boolean
     Dim mvBookMark As Integer
@@ -59,8 +60,8 @@ Friend Class frmDepositTake
 		'Display the list of Titles in the DataCombo
         grdDataGrid.DataSource = adoPrimaryRS
         grdDataGrid.Columns(0).HeaderText = "Stock Name"
-        grdDataGrid.Columns(0).DefaultCellStyle.Alignment = MSDataGridLib.AlignmentConstants.dbgLeft
-        grdDataGrid.Columns(0).Frozen = True
+		grdDataGrid.Columns(0).DefaultCellStyle.Alignment = MSDataGridLib.AlignmentConstants.dbgLeft
+		grdDataGrid.Columns(0).Frozen = True
 		
         grdDataGrid.Columns(1).HeaderText = "Type"
         grdDataGrid.Columns(1).Frozen = True
